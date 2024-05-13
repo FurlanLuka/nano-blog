@@ -1,0 +1,11 @@
+{
+  "name": "nano_blog_cli",
+  "author": {
+    "name": "Luka Furlan",
+    "email": "me@lukafurlan.net"
+  },
+  "version": "0.1.0",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+}

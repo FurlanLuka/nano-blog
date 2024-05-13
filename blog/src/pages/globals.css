@@ -1,0 +1,34 @@
+:root {
+  --font-family: "IBM Plex Mono", monospace;
+}
+
+body {
+  background: black;
+  font-family: var(--font-family);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  line-height: 24px;
+  color: #e2e0e0;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+main {
+  padding: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+blockquote {
+  border-left: 8px solid #eaeaea;
+  color: #9f9f9f;
+  padding-left: 12px;
+  margin-inline-start: 25px;
+}
+
+a {
+  color: greenyellow;
+  text-decoration: none;
+}
