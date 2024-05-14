@@ -7,8 +7,9 @@ import { Markdown } from "frln/components/markdown/markdown";
 
 export const getStaticPaths = (async () => {
   const posts = getPosts();
+
   const paths = posts.map((post) => ({
-    params: { id: post.slug },
+    params: { id: [post.slug, "index"] },
   }));
 
   return {
@@ -18,10 +19,11 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 export const getStaticProps = (async (context) => {
-  const { id } = context.params!;
+  const { id } = context.params! as { id: string[] };
 
   const posts = getPosts();
-  const post = posts.find((post) => post.slug === id);
+
+  const post = posts.find((post) => post.slug === id[0]);
 
   return {
     props: {
