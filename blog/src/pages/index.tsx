@@ -44,7 +44,7 @@ export const Index: React.FC<{
         </ul>
         <h1>Projects</h1>
         <ul>
-          {config.projects.map((project) => (
+          {config.projects?.map((project) => (
             <li key={project.title} className={styles.listItem}>
               <a href={`https://${project.uri}`} target="_blank">
                 {project.title}
@@ -58,7 +58,7 @@ export const Index: React.FC<{
           {
             shortcut: "C",
             text: "Contact me",
-            onAction: () => alert("Contact"),
+            onAction: () => window.open(`mailto:${config.emailAddress}`),
           },
         ]}
       />
