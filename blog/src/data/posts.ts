@@ -10,7 +10,7 @@ export interface Post {
 }
 
 export function getPosts(): Post[] {
-  const blogpostsDirectory = path.join(process.cwd(), "nano-blog-content/posts");
+  const blogpostsDirectory = path.join(process.cwd(), "ceontent/posts");
 
   return fs.readdirSync(blogpostsDirectory).map((filename) => {
     const fileNameParts = filename.split("_");

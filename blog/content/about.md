@@ -1,0 +1,1 @@
+A simple nano inspired blog platform, that builds from markdown and includes friendly CLI tool for managing your blog.

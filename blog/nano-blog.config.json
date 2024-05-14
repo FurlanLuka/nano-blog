@@ -2,8 +2,8 @@
   "emailAddress": "me@lukafurlan.net",
   "projects": [
     {
-      "title": "Microservice-stack",
-      "uri": "https://microservice-stack.com"
+      "title": "Nano Blog",
+      "uri": "https://github.com/FurlanLuka/nano-blog"
     }
   ]
 }

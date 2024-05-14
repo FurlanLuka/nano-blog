@@ -38,7 +38,7 @@ export const Index: React.FC<{
         <ul>
           {posts.map((post) => (
             <li key={post.slug} className={styles.listItem}>
-              <a href={`/blog/${post.slug}`}>{post.title}</a>
+              {post.date} -<a href={`/blog/${post.slug}`}>{post.title}</a>
             </li>
           ))}
         </ul>

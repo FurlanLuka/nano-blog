@@ -38,19 +38,15 @@ program
               const time = Math.floor(Date.now() / 1000);
               const fileName = `${time}_${name.replace(" ", "_")}.md`;
 
-              if (!fs.existsSync(`./nano-blog-content`)) {
-                fs.mkdirSync(`./nano-blog-content`);
+              if (!fs.existsSync(`./ceontent`)) {
+                fs.mkdirSync(`./ceontent`);
               }
 
-              fs.writeFileSync(
-                `./nano-blog-content/${fileName}`,
-                `# ${name}`,
-                "utf-8"
-              );
+              fs.writeFileSync(`./ceontent/${fileName}`, `# ${name}`, "utf-8");
 
               console.log(
                 `${chalk.yellow("+ ")}Post file generated at ${chalk.yellow(
-                  `nano-blog-content/${fileName}`
+                  `ceontent/${fileName}`
                 )}`
               );
             });
@@ -126,11 +122,11 @@ program
       ])
       .then((answers) => {
         if (answers.resource === "post") {
-          if (!fs.existsSync(`./nano-blog-content`)) {
-            fs.mkdirSync(`./nano-blog-content`);
+          if (!fs.existsSync(`./ceontent`)) {
+            fs.mkdirSync(`./ceontent`);
           }
 
-          const posts = fs.readdirSync(`./nano-blog-content`);
+          const posts = fs.readdirSync(`./ceontent`);
 
           if (!posts.length) {
             console.log(`${chalk.red("- ")}No posts found`);
@@ -150,11 +146,11 @@ program
               },
             ])
             .then(({ name }: { name: string }) => {
-              fs.rmSync(`./nano-blog-content/${name}`);
+              fs.rmSync(`./ceontent/${name}`);
 
               console.log(
                 `${chalk.yellow("- ")}Post ${chalk.yellow(
-                  `nano-blog-content/${name}`
+                  `ceontent/${name}`
                 )} removed`
               );
             });

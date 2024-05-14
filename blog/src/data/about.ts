@@ -6,7 +6,7 @@ export interface About {
 }
 
 export function getAbout(): About {
-  const aboutPath = path.join(process.cwd(), "nano-blog-content/about.md");
+  const aboutPath = path.join(process.cwd(), "ceontent/about.md");
 
   return {
     content: fs.readFileSync(aboutPath, "utf-8"),
